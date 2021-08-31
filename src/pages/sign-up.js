@@ -19,8 +19,8 @@ export default function SignUp() {
   const handleSignup = async (event) => {
     event.preventDefault();
 
-    const usernameExits = await doesUsernameExits(username);
-    if (usernameExits.length) {
+    const usernameExists = await doesUsernameExits(username);
+    if (!usernameExists) {
       try {
         const createdUserResult = await firebase
           .auth()
