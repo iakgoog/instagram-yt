@@ -12,6 +12,7 @@ function App() {
         <Switch>
           <Route path={ROUTES.LOGIN} component={Login} />
           <Route path={ROUTES.SIGN_UP} component={Signup} />
+          <Route component={NotFound} />
         </Switch>
       </Suspense>
     </Router>
